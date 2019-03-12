@@ -1,169 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>CV | Maxim Logvinenko</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header>
         <h1>CV</h1>
     </header>
     <main>
         <article id="summary">
-            <img class="photo" src="assets/images/photo.jpg" alt="portrait" width= "200" height= "200">
+            <img class="photo" src="assets/images/photo.jpg" alt="portrait" width="200" height="200">
             <h2>Maxim Logvinenko</h2>
             <h3>Summary</h3>
             <p>
-                Student, seeking for new knowleges and possibilities 
-                to show oneself. Ready to develope own skills and 
-                work hard to achieve the desired. Now study for 
-                WEB-programming specialization in BSU and that's
-                why going to attend front-end development courses.
+                Student, seeking for new knowleges and possibilities to show oneself. Ready to develope own skills and work hard to achieve the desired. Now study for WEB-programming specialization in BSU and that's why going to attend front-end development courses.
             </p>
-        </article>  
+        </article>
         <section id="skills">
-                <div class="heading2">
-                    <h3>Skills</h3>
-                </div>
-                <p>
-                    Ended C/C++ course at the 
-                    Belarussian State University, 
-                    protected with honors the coursework on 
-                    Qt framework. Now independetly learning C#.
-                </p>
-                <p class="caption">C/C++</p>
-                <div class="level cpp">
-                    <div class="part filled">1</div>
-                    <div class="part filled">2</div>
-                    <div class="part empty">3</div>
-                    <div class="part empty">4</div>
-                </div><br>
-                <p class="caption">C#</p>
-                <div class="level cs">
-                    <div class="part filled">1</div>
-                    <div class="part empty">2</div>
-                    <div class="part empty">3</div>
-                    <div class="part empty">4</div>
-                </div>
+            <div class="heading2">
+                <h3>Skills</h3>
+            </div>
+            <p>
+                Ended C/C++ course at the Belarussian State University, protected with honors the coursework on Qt framework. Now independetly learning C#.
+            </p>
+            <p class="caption">C/C++</p>
+            <div class="level cpp">
+                <div class="part filled">1</div>
+                <div class="part filled">2</div>
+                <div class="part empty">3</div>
+                <div class="part empty">4</div>
+            </div><br>
+            <p class="caption">C#</p>
+            <div class="level cs">
+                <div class="part filled">1</div>
+                <div class="part empty">2</div>
+                <div class="part empty">3</div>
+                <div class="part empty">4</div>
             </div>
         </section>
         <section id="samples">
             <div class="heading2">
                 <h3>Code Samples</h3>
             </div>
-                <label for="C++">C++</label>
-                <input id="C++" class="spoiler" type="checkbox">
+            <label for="C++">C++</label>
+            <input id="C++" class="spoiler" type="checkbox">
             <div class="sample">
                 <p>Program, checking is the brackets sequence is correct according given configurations</p>
                 <p class="code">
-                        #include "pch.h"
-                        <br>#include &lt;iostream&gt;
-                        <br>#include &lt;string&gt;
-                        <br>#include &lt;stack&gt;
-                        <br>using namespace std;
-                        <br>
-                        <br>
-                        <br>bool checkBrackets(string& str, char** bracketsConfig, int size_of_braketsConfig);
-                        <br>char find_first_brace(char** arr, int size, char brace);
-                        <br>char find_second_brace(char** arr, int size, char brace);
-                        <br>
-                        <br>int main()
-                        <br>{
-                        <br>    int n;
-                        <br>    string str;
-                        <br>    char** bracketsConfig;
-                        <br>    
-                        <br>    cout &lt;&lt; "Enter string:\n";
-                        <br>    cin &gt;&gt; str;
-                        <br>    cout &lt;&lt; "Enter size of array of brackets configurations:\n";
-                        <br>    cin &gt;&gt; n;
-                        <br>    cout &lt;&lt; "Enter the array of brackets configurations by pairs:\n";
-                        <br>    bracketsConfig = new char*[n];
-                        <br>    char brace;
-                        <br>    for (int i = 0; i &lt; n; i++) {
-                        <br>        bracketsConfig[i] = new char[2];
-                        <br>        cout &lt;&lt; "First of pair " &lt;&lt; i &lt;&lt; ":\n";
-                        <br>        cin &gt;&gt; brace;
-                        <br>        bracketsConfig[i][0] = brace;
-                        <br>        cout &lt;&lt; "Second of pair " &lt;&lt; i &lt;&lt; ":\n";
-                        <br>        cin &gt;&gt; brace;
-                        <br>        bracketsConfig[i][1] = brace;
-                        <br>    }
-                        <br>    if (checkBrackets(str, bracketsConfig, n)) {
-                        <br>        cout &lt;&lt; "Sequence is correct\n";
-                        <br>    }
-                        <br>    else {
-                        <br>        cout &lt;&lt; "Wrong sequence\n";
-                        <br>    }
-                        <br>    system("pause");
-                        <br>    return 0;
-                        <br>}
-                        <br>
-                        <br>bool checkBrackets(string& str, char** bracketsConfig, int size_of_braketsConfig){
-                        <br>
-                        <br>    stack&lt;char&gt;* stk = new stack&lt;char&gt;();
-                        <br>    char brace;
-                        <br>
-                        <br>    for (int i = 0; i &lt; str.size(); i++) {
-                        <br>
-                        <br>        if (stk-&gt;size() != 0) {
-                        <br>
-                        <br>            brace = find_second_brace(bracketsConfig, size_of_braketsConfig, str[i]);
-                        <br>
-                        <br>            if (stk-&gt;top() == brace) {
-                        <br>                stk-&gt;pop();
-                        <br>                continue;
-                        <br>            }
-                        <br>            else {
-                        <br>                return false;
-                        <br>            }
-                        <br>        }
-                        <br>
-                        <br>        brace = find_first_brace(bracketsConfig, size_of_braketsConfig, str[i]);
-                        <br>
-                        <br>        if (brace == -1) {
-                        <br>            return false;
-                        <br>        }
-                        <br>
-                        <br>        stk-&gt;push(str[i]);
-                        <br>    }
-                        <br>
-                        <br>    if (stk-&gt;size() == 0) {
-                        <br>        delete stk;
-                        <br>        return true;
-                        <br>    }
-                        <br>    else {
-                        <br>        delete stk;
-                        <br>        return false;
-                        <br>    }
-                        <br>}
-                        <br>
-                        <br>
-                        <br>/*Function searching the opening brace in bracketsConfig*/
-                        <br>char find_first_brace(char** arr, int size, char brace) {
-                        <br>
-                        <br>    for (int i = 0; i &lt; size; i++) {
-                        <br>        if (arr[i][0] == brace) {
-                        <br>            return arr[i][0];
-                        <br>        }
-                        <br>    }
-                        <br>
-                        <br>    return 0;
-                        <br>}
-                        <br>
-                        <br>
-                        <br>/*Function searching the closing brace in bracketsConfig*/
-                        <br>char find_second_brace(char** arr, int size, char brace) {
-                        <br>
-                        <br>    for (int i = 0; i &lt; size; i++) {
-                        <br>        if (arr[i][1] == brace) {
-                        <br>            return arr[i][0];
-                        <br>        }
-                        <br>    }
-                        <br>
-                        <br>    return 0;
-                        <br>}
+                    #include "pch.h"
+                    <br>#include &lt;iostream&gt;
+                    <br>#include &lt;string&gt;
+                    <br>#include &lt;stack&gt;
+                    <br>using namespace std;
+                    <br>
+                    <br>
+                    <br>bool checkBrackets(string& str, char** bracketsConfig, int size_of_braketsConfig);
+                    <br>char find_first_brace(char** arr, int size, char brace);
+                    <br>char find_second_brace(char** arr, int size, char brace);
+                    <br>
+                    <br>int main()
+                    <br>{
+                    <br> int n;
+                    <br> string str;
+                    <br> char** bracketsConfig;
+                    <br>
+                    <br> cout &lt;&lt; "Enter string:\n";
+                    <br> cin &gt;&gt; str;
+                    <br> cout &lt;&lt; "Enter size of array of brackets configurations:\n";
+                    <br> cin &gt;&gt; n;
+                    <br> cout &lt;&lt; "Enter the array of brackets configurations by pairs:\n";
+                    <br> bracketsConfig = new char*[n];
+                    <br> char brace;
+                    <br> for (int i = 0; i &lt; n; i++) {
+                    <br> bracketsConfig[i] = new char[2];
+                    <br> cout &lt;&lt; "First of pair " &lt;&lt; i &lt;&lt; ":\n";
+                    <br> cin &gt;&gt; brace;
+                    <br> bracketsConfig[i][0] = brace;
+                    <br> cout &lt;&lt; "Second of pair " &lt;&lt; i &lt;&lt; ":\n";
+                    <br> cin &gt;&gt; brace;
+                    <br> bracketsConfig[i][1] = brace;
+                    <br> }
+                    <br> if (checkBrackets(str, bracketsConfig, n)) {
+                    <br> cout &lt;&lt; "Sequence is correct\n";
+                    <br> }
+                    <br> else {
+                    <br> cout &lt;&lt; "Wrong sequence\n";
+                    <br> }
+                    <br> system("pause");
+                    <br> return 0;
+                    <br>}
+                    <br>
+                    <br>bool checkBrackets(string& str, char** bracketsConfig, int size_of_braketsConfig){
+                    <br>
+                    <br> stack&lt;char&gt;* stk = new stack&lt;char&gt;();
+                    <br> char brace;
+                    <br>
+                    <br> for (int i = 0; i &lt; str.size(); i++) {
+                    <br>
+                    <br> if (stk-&gt;size() != 0) {
+                    <br>
+                    <br> brace = find_second_brace(bracketsConfig, size_of_braketsConfig, str[i]);
+                    <br>
+                    <br> if (stk-&gt;top() == brace) {
+                    <br> stk-&gt;pop();
+                    <br> continue;
+                    <br> }
+                    <br> else {
+                    <br> return false;
+                    <br> }
+                    <br> }
+                    <br>
+                    <br> brace = find_first_brace(bracketsConfig, size_of_braketsConfig, str[i]);
+                    <br>
+                    <br> if (brace == -1) {
+                    <br> return false;
+                    <br> }
+                    <br>
+                    <br> stk-&gt;push(str[i]);
+                    <br> }
+                    <br>
+                    <br> if (stk-&gt;size() == 0) {
+                    <br> delete stk;
+                    <br> return true;
+                    <br> }
+                    <br> else {
+                    <br> delete stk;
+                    <br> return false;
+                    <br> }
+                    <br>}
+                    <br>
+                    <br>
+                    <br>/*Function searching the opening brace in bracketsConfig*/
+                    <br>char find_first_brace(char** arr, int size, char brace) {
+                    <br>
+                    <br> for (int i = 0; i &lt; size; i++) {
+                    <br> if (arr[i][0] == brace) {
+                    <br> return arr[i][0];
+                    <br> }
+                    <br> }
+                    <br>
+                    <br> return 0;
+                    <br>}
+                    <br>
+                    <br>
+                    <br>/*Function searching the closing brace in bracketsConfig*/
+                    <br>char find_second_brace(char** arr, int size, char brace) {
+                    <br>
+                    <br> for (int i = 0; i &lt; size; i++) {
+                    <br> if (arr[i][1] == brace) {
+                    <br> return arr[i][0];
+                    <br> }
+                    <br> }
+                    <br>
+                    <br> return 0;
+                    <br>}
                 </p>
             </div>
         </section>
@@ -173,39 +167,31 @@
             </div>
             <img class="photo" src="assets/images/qualime.png" alt="quai.me logo" width="200" height="200">
             <p>
-                    Participated in scientific work at BSU, 
-                    as the part of Quali.me  
-                    team (designer/WEB-designer) 
-                    won several republican and international competitions.
+                Participated in scientific work at BSU, as the part of Quali.me team (designer/WEB-designer) won several republican and international competitions.
             </p>
             <div class="achievements">
-            <h4>Achievements</h4>
-            <p>
-                <span class="date">8/09/18</span> Participant of Science Festival, Minsk<br>
-                <a class="about" href="https://www.belta.by/society/view/festival-nauki-2018-projdet-v-minske-v-sentjabre-284888-2018/">
+                <h4>Achievements</h4>
+                <p>
+                    <span class="date">8/09/18</span> Participant of Science Festival, Minsk<br>
+                    <a class="about" href="https://www.belta.by/society/view/festival-nauki-2018-projdet-v-minske-v-sentjabre-284888-2018/">
                     About
                 </a>
-            </p>
-            <p>
-                <span class="date">28/12/17</span> Winner of Republican projects 
-                competition "Information and mobile technologies 
-                in educational process", Minsk<br>
-                <a class="about" href="http://yip.unibel.by">
+                </p>
+                <p>
+                    <span class="date">28/12/17</span> Winner of Republican projects competition "Information and mobile technologies in educational process", Minsk<br>
+                    <a class="about" href="http://yip.unibel.by">
                     About
                 </a>
-            </p>
-            <p>
-                <span class="date">12/12/17</span> Participant of exhibition "Youth and new horizons of science" as the part
-                of II congress of scientists of the Republic of Belarus, Minsk
-            </p>
-            <p>
-                <span class="date">28/11/17</span> Participant of International scientific-technical 
-                forum-exhibition  "ITE 2018 Information 
-                technologies in education", Minsk<br>
-                <a class="about" href="https://ite.unibel.by/eng/index.php">
+                </p>
+                <p>
+                    <span class="date">12/12/17</span> Participant of exhibition "Youth and new horizons of science" as the part of II congress of scientists of the Republic of Belarus, Minsk
+                </p>
+                <p>
+                    <span class="date">28/11/17</span> Participant of International scientific-technical forum-exhibition "ITE 2018 Information technologies in education", Minsk<br>
+                    <a class="about" href="https://ite.unibel.by/eng/index.php">
                     About
                 </a>
-            </p>
+                </p>
             </div>
         </section>
         <section id="education">
@@ -214,32 +200,29 @@
             </div>
             <p>General secondary education</p>
             <p>
-                    Currently studying in:<br>
-                   <strong>Belarussian State University</strong><br>
-                    Faculity of Social and Cultural communications<br>
-                    Department of Computer Science;<br>
-                    <br>
-                    Specialisation: <em>WEB-programming and computer graphics</em>.
+                Currently studying in:<br>
+                <strong>Belarussian State University</strong><br> Faculity of Social and Cultural communications<br> Department of Computer Science;<br>
+                <br> Specialisation: <em>WEB-programming and computer graphics</em>.
             </p>
         </section>
         <section>
             <div class="heading2">
                 <h3>English Level</h3>
             </div>
-            <p>Able to to support common conversation on well-known themes, 
-                able to read English texts belonging to specialization.</p>
+            <p>Able to to support common conversation on well-known themes, able to read English texts belonging to specialization.</p>
         </section>
     </main>
     <footer>
         <div>
-        <h2>Maxim Logvinenko</h2>
-        <div class="contacts">
-            <h3>Contacts</h3>
-            <a class="phone" href="tel: +375 (29) 545 74 84">+375 (29) 545 74 84;</a><br>
-            <a class="email" href="mailto:  lo.ma200018@gmail.com">lo.ma200018@gmail.com</a><br>
-            <a class="email" href="mailto: sad.mammoth@yandex.com.">sad.mammoth@yandex.com</a><br>
-        </div>
+            <h2>Maxim Logvinenko</h2>
+            <div class="contacts">
+                <h3>Contacts</h3>
+                <a class="phone" href="tel: +375 (29) 545 74 84">+375 (29) 545 74 84;</a><br>
+                <a class="email" href="mailto:  lo.ma200018@gmail.com">lo.ma200018@gmail.com</a><br>
+                <a class="email" href="mailto: sad.mammoth@yandex.com.">sad.mammoth@yandex.com</a><br>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
