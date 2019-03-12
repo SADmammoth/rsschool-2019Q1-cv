@@ -132,6 +132,7 @@ input.spoiler:checked+div {
 
 .code {
     padding: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 input.spoiler {
