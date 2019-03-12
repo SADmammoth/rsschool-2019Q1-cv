@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+}
+
+header{
+    background-color: #323232;
+}
+
+h1{
+    width: 800px;
+    margin: 0 auto;
+    color: #c8c8c8;
+    font-size: 40px;
+}
+
+.photo {
+    float: left;
+    margin-right: 40px;
+}
+
+#summary h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#summary h3{
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#summary {
+    width: 800px;
+    height: 200px;
+    margin: 60px auto;
+}
+
+section {
+    width: 800px;
+    margin: 40px auto;
+    border: 2px solid #323232;
+    padding-bottom: 20px;
+}
+
+section .heading2 {
+    vertical-align: middle;
+    background-color: #c8c8c8;
+    height: 45px;
+    padding-top: 10px;
+}
+
+section h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-indent: 20px;
+}
+
+section p {
+   padding: 20px;
+}
+
+#skills .caption{
+    height: 20px;
+    display: inline-block;
+}
+
+.level{
+    display: inline-block;
+    height: 10px;
+}
+.part{
+    box-sizing: border-box;
+    width: 60px;
+    height: 10px;
+    font-size: 1px;
+    display: inline-block;
+}
+
+.filled {
+    background-color: #323232;
+}
+
+.empty{
+    background-color: #c8c8c8;
+}
+
+label[for="C++"]{
+    padding-left: 100px;
+    width: 50%;
+    background-color: #e5e5e5;
+}
+
+input.spoiler:checked + div {
+    display: block;
+    border: 2px;
+    margin: 40px;
+    background-color: #f2f2f2;
+}
+
+.code{
+    padding: 40px;
+}
+
+input.spoiler{
+    -webkit-appearance: none;
+    outline: none;
+    padding-top: 30px;
+}
+
+input.spoiler::before {
+    content: "\25BC";
+    width: 10px;
+}
+
+input.spoiler:checked::before {
+    content: "\25B2";
+    width: 10px;
+}
+
+.sample {
+    display: none;
+}
+
+.about{
+    color: #505050;
+}
+
+#work .date{
+    font-style: italic;
+}
+
+#work .achievements{
+    width: 400px;
+    padding-left: 240px;
+}
+
+.achievements p{
+    border: 2px solid #a1a1a1;
+    margin: 10px 0;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #323232;
+}
+
+.contacts{
+    font-size: 15px;
+    color: #c8c8c8;
+}
+
+.contacts a{
+    color: #c8c8c8;
+}
+
+footer h2{
+    width: 50%;
+    color: #ffffff;
+}
+
+footer div{
+    padding-top: 10px;
+    width: 800px;
+    margin: 0 auto;
+}

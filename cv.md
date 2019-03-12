@@ -19,7 +19,7 @@
    General secondary education; 
    
    Currently studying in:     
-   Belarussian State University  
+   Belarussian State University
    Faculity of Social and Cultural communications  
    Department of Computer Science;
                          
