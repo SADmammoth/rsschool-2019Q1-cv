@@ -3,8 +3,7 @@
 ### 1.Maxim, Logvinenko.
 ### 2. Contacts
    Mobile: +375 (29) 545 74 84;  
-   e-mail: lo.ma200018@gmail.com  
-       or: sad.mammoth@yandex.com.
+   e-mail: [maxim.logvinen@gmail.com](mailto:maxim.logvinen@gmail.com)
 ### 3. Summary
    Student, seeking for new knowleges and possibilities to show oneself. Ready to develope own skills and work hard to achieve the desired.
    Now study for WEB-programming specialization in BSU and that's why going to attend front-end development courses.
@@ -96,14 +95,17 @@
 ### 6. Work experience
    Participated in scientific work at BSU, as the part of [Quali.me](https://vk.com/qualime) team winned several republican and international competitions.
 ### 7. Education
-   General secondary education; 
-   
-   Currently studying in:     
-   Belarussian State University
-   Faculity of Social and Cultural communications  
-   Department of Computer Science;
-                         
-   Specialisation: WEB-programming and computer graphics.
-   
+  __2011-2015 Art School (Fine Arts)__
+  
+  __2017-2021 Belarusian State University__, 
+  
+  Faculity of Social and Cultural Communications,
+  
+  Applied Informatics (WEB-programming and computer design).
+  
+  __2019 Rolling Scopes School courses__
+  Front-end developer JavaScript, Node.js, React)     
+  Sertificate: https://app.rs.school/certificate/vg1lsewe 
+ 
 ### 8. English Level
    Able to to support common conversation on well-known themes, able to read English texts belonging to specialization.
